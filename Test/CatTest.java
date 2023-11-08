@@ -21,7 +21,10 @@ class CatTest {
     @Test
     void getGender() {
         // Must be either 'M' or 'F'
-        assertTrue(c.getGender() == 'M' || c.getGender() == 'F');
+        String formatChar = String.valueOf(c.getGender()).toUpperCase();
+        char formattedChar = formatChar.charAt(0);
+
+        assertTrue(formattedChar == 'M' || formattedChar == 'F');
     }
 
     @Test
